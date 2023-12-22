@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callejero Fino</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://i0.wp.com/panoramadirecto.com/wp-content/uploads/2022/04/DSC_6464igb.jpg?fit=1335%2C2000&ssl=1');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: rgba(30, 255, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(221, 6, 6, 0.5);
+        }
+
+        audio {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #333;
+            cursor: pointer;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="color: green;">🎧Callejero Fino🎧</h1>
+    </header>
+
+    <main>
+        <audio controls>
+            <source src="CALLEJERO FINO  DJ TAO Turreo Sessions.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        <ul>
+            <li onclick="playSong('CALLEJERO FINO  DJ TAO Turreo Sessions.mp3')">CALLEJERO FINO | DJ TAO Turreo Sessions #723</li>
+            <li onclick="playSong(' Callejero Fino, BM, Khea, Dj Alan Gomez -🏍️TITÁN RMX🏍️.mp3')"> Callejero Fino, BM, Khea, Dj Alan Gomez -🏍️TITÁN RMX🏍️</li>
+            <li onclick="playSong(' CALLEJERO FINO - 🥵 LE DOY PERREO 🥵.mp3')"> CALLEJERO FINO - 🥵 LE DOY PERREO 🥵</li>
+            <li onclick="playSong(' CALLEJERO FINO - 🇦🇷PA TRA RKT🇦🇷 ft Pusho Dj.mp3')">CALLEJERO FINO - 🇦🇷PA TRA RKT🇦🇷 ft Pusho Dj</li>
+            <li onclick="playSong(' CALLEJERO FINO - PA TRA REMIX RKT L-GANTE, ECKO, Kaleb Di Masi, Homer,Papichamp ,John C, Fili Wey.mp3')">  CALLEJERO FINO - PA TRA REMIX RKT L-GANTE, ECKO, Kaleb Di Masi, Homer,Papichamp ,John C, Fili Wey</li>
+            <li onclick="playSong(' CALLEJERO FINO - 😍 FUAMIAMOR 😍.mp3')"> CALLEJERO FINO - 😍 FUAMIAMOR 😍</li>
+            <li onclick="playSong(' CALLEJERO FINO - 😈 PIDE REMIX 😈 x EL PESA 9 (Shot by Tripwshots).mp3')">  CALLEJERO FINO - 😈 PIDE REMIX 😈 x EL PESA 9 (Shot by Tripwshots)</li>
+            <li onclick="playSong(' CALLEJERO FINO - 🥀 QUE TE VAYA BIEN 🥀.mp3')"> CALLEJERO FINO - 🥀 QUE TE VAYA BIEN 🥀</li>
+            <li onclick="playSong('  Rei, Callejero Fino - Tu Turrito (Video Oficial).mp3')">  Rei, Callejero Fino - Tu Turrito </li>
+           
+            <!-- Puedes agregar más canciones -->
+        </ul>
+    </main>
+
+    <script>
+        function playSong(songUrl) {
+            const audioPlayer = document.querySelector('audio');
+            audioPlayer.src = songUrl;
+            audioPlayer.play();
+        }
+    </script>
+</body>
+
+</html>
