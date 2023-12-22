@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify ++</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha384-Qn538hme1QQVhP+ecddFhVuIah/2tLPWKtcPjpxQzc26CxTtPFuQMNfm2RfEHfKk"
+        crossorigin="anonymous">
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            overflow: hidden;
+            background-color: green;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Estilos del menú lateral */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+            background-color: rgba(17, 17, 17, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            background-image: linear-gradient(to right, #000000, #1f1f1f);
+        }
+
+        .sidenav a {
+            padding: 15px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #fff;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            background-color: #555;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        /* Estilos del contenido principal */
+        .text-container {
+            margin-left: 250px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            margin-top: 50px;
+        }
+
+        h1, p {
+            color: #000;
+        }
+
+        /* Estilos del botón de menú */
+        .menu-btn {
+            font-size: 30px;
+            cursor: pointer;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            transition: transform 0.3s ease-in-out;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-btn.clicked {
+            transform: rotate(90deg);
+        }
+
+        /* Estilos para pantallas pequeñas */
+        @media screen and (max-width: 600px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+
+            .sidenav a {
+                font-size: 18px;
+            }
+
+            .closebtn {
+                font-size: 30px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .text-container {
+                margin-left: 15px;
+            }
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilos de la tabla */
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        /* Enlaces en la tabla */
+        a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Botón de menú móvil -->
+    <span class="menu-btn" onclick="openNav()">☰ Menú</span>
+
+    <!-- Menú lateral -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">✕</a>
+        <a href="#">Inicio</a>
+        <a href="#">Buscar</a>
+        <a href="#">Mis Canciones</a>
+        <a href="#">Novedades</a>
+    </div>
+
+    <!-- Contenido principal -->
+    <div class="text-container">
+        <h1>Bienvenido a Mi Plataforma de Música Online</h1>
+        <p>Descubre la mejor experiencia musical en línea. Explora nuestra amplia colección de canciones, crea tus listas de reproducción personalizadas y disfruta de la música que amas, donde sea que estés.</p>
+
+        <!-- Tabla de Artistas -->
+        <h2>Artistas por País</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Artista</th>
+                    <th>País</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Artistas Argentinos -->
+                <tr>
+                    <td><a href="calle.html">Callejero Fino</a></td>
+                    <td>Argentina</td>
+                </tr>
+                <tr>
+                    <td><a href="enlace-del-artista">Charly García</a></td>
+                    <td>Argentina</td>
+                </tr>
+                <!-- Artistas Uruguayos -->
+                <tr>
+                    <td><a href="enlace-del-artista">Jorge Drexler</a></td>
+                    <td>Uruguay</td>
+                </tr>
+                <tr>
+                    <td><a href="enlace-del-artista">La Vela Puerca</a></td>
+                    <td>Uruguay</td>
+                </tr>
+                <!-- Artistas Chilenos -->
+                <tr>
+                    <td><a href="enlace-del-artista">Violeta Parra</a></td>
+                    <td>Chile</td>
+                </tr>
+                <tr>
+                    <td><a href="enlace-del-artista">Los Bunkers</a></td>
+                    <td>Chile</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.querySelector(".menu-btn").classList.add("clicked");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.querySelector(".menu-btn").classList.remove("clicked");
+        }
+    </script>
+
+</body>
+
+</html>
