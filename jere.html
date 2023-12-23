@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎧Jere Klein🎧</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://www.latercera.com/resizer/pBiXZrnXDl2V6tsdBrfEWwQaP6Y=/900x600/smart/cloudfront-us-east-1.images.arcpublishing.com/copesa/JXYWZDDPAZEBXHJPZWMK67YJT4.jpeg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        main {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: rgba(30, 255, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(221, 6, 6, 0.5);
+        }
+
+        audio {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            padding: 10px;
+            border-bottom: 1px solid #333;
+            cursor: pointer;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="color: green;">🎧Jere Klein🎧</h1>
+    </header>
+
+    <main>
+        <audio controls>
+            <source src="JERE KLEIN  ANDO.mp3" type="audio/mp3">
+            Tu navegador no soporta el elemento de audio.
+        </audio>
+
+        <ul>
+            <li onclick="playSong('JERE KLEIN  ANDO.mp3')"> JERE KLEIN - ANDO</li>
+            <li onclick="playSong('JERE KLEIN & NICKI NICOLE - X ESO BB! (Video Oficial) Prod. adkiboi - Valdi - Daimi  ENFASIS.mp3')"> JERE KLEIN & NICKI NICOLE - X ESO BB!</li>
+            <li onclick="playSong('  JERE KLEIN FT LUCKY BROWN - MANDAME TU UBI.mp3')">JERE KLEIN FT LUCKY BROWN - MANDAME TU UBI</li>
+            <li onclick="playSong('  JERE KLEIN - RAM.mp3')"> JERE KLEIN - RAM | Prod. Adkiboi x Mateo on the beatz | #6.5</li>
+            <li onclick="playSong('cual es su nombre.mp3')">  LUCKY BROWN, JERE KLEIN - ¿CUÁL ES SU NOMBRE?</li>
+            <li onclick="playSong(' JERE KLEIN FT NICKOOG CLK, LUCKY BROWN, EL BAI - PRINCESITA DE ..... (VIDEO OFICIAL)  ENFASIS.mp3')">  JERE KLEIN FT NICKOOG CLK, LUCKY BROWN, EL BAI - PRINCESITA DE ..... | ENFASIS</li>
+            <li onclick="playSong('  JERE KLEIN FT EL BAI - FINA FINA.mp3')">JERE KLEIN FT EL BAI - FINA FINA | ENFASIS </li>
+            <li onclick="playSong('  JERE KLEIN - KE MAL.mp3')">JERE KLEIN - KE MAL | ENFASIS</li>
+            <li onclick="playSong('JERE KLEIN - UNA EN UN MILLON.mp3')"> JERE KLEIN - UNA EN UN MILLON  | Prod. Adkiboi - Mateo en el beatz | ENFASIS</li>
+           
+            <!-- Puedes agregar más canciones -->
+        </ul>
+    </main>
+
+    <script>
+        function playSong(songUrl) {
+            const audioPlayer = document.querySelector('audio');
+            audioPlayer.src = songUrl;
+            audioPlayer.play();
+        }
+    </script>
+</body>
+
+</html>
